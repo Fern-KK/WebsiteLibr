@@ -33,15 +33,21 @@ body {
   color: black;
 }
 
-.normalText {
+.normalText,
+.normalText .available,
+.normalText .unavailable {
   font-size: 1em;
 }
 
-.bigText {
+.bigText,
+.bigText .available,
+.bigText .unavailable {
   font-size: 1.2em;
 }
 
-.biggerText {
+.biggerText,
+.biggerText .available,
+.biggerText .unavailable {
   font-size: 1.5em;
 }
 
