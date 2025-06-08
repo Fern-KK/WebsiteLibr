@@ -85,7 +85,7 @@ let books;
 async function fetchContent() {
     const response = await fetch('https://backend-www-projekt.onrender.com/books');
     const data = await response.json();
-    books = data;
+    books = data.books;
     lista();
 }
 fetchContent();
