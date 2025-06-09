@@ -64,11 +64,7 @@ body {
   font-size: 1.5em;
 }
 
-#katalog {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
+
 
 
 
@@ -152,19 +148,36 @@ section {
   flex-flow: row wrap;
   min-height: 32em;
   justify-content: space-between;
+  
 
 
 }
-
-
-
-
-
-
 article {
   padding: 1em;
-
 }
+#kontakt summary{
+  font-weight: bold;
+}
+#kontakt details{
+  margin: 1em ;
+}
+#katalog {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#loading{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+
+
+
+
 
 aside {
   display: flex;
