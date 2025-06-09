@@ -90,7 +90,11 @@ async function fetchContent() {
 }
 fetchContent();
 function lista() {
+    // usuwanie ladowania
+    document.getElementById("loading").remove();
     books.forEach(element => {
+        
+
         // Główny div
         const bookDiv = document.createElement("div");
         bookDiv.className = "book";
@@ -153,3 +157,6 @@ function lista() {
         document.getElementById("katalog").appendChild(bookDiv);
     });
 }
+
+
+
