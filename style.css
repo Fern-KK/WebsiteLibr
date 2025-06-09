@@ -34,19 +34,22 @@ body {
 
 .normalText,
 .normalText .available,
-.normalText .unavailable {
+.normalText .unavailable,
+.normalText #searchInput {
   font-size: 1em;
 }
 
 .bigText,
 .bigText .available,
-.bigText .unavailable {
+.bigText .unavailable,
+.bigText #searchInput {
   font-size: 1.2em;
 }
 
 .biggerText,
 .biggerText .available,
-.biggerText .unavailable {
+.biggerText .unavailable,
+.biggerText #searchInput {
   font-size: 1.5em;
 }
 
@@ -82,17 +85,26 @@ header {
 header a {
   color: brown;
   text-decoration: none;
-  flex-grow: 33;
+  flex-grow: 7;
   font-size: 2em;
 
 }
 
-header p {
+header div {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-items: center;
+  justify-content: space-evenly;
+}
+
+header div p {
   padding: 0 1px 0 1px;
   margin: auto;
   list-style: none;
-  flex-grow: 1;
   text-align: center;
+  display: flex;
+  justify-items: center;
 
 }
 
@@ -142,30 +154,35 @@ nav a:hover {
 
 
 
-section {
+main {
   display: flex;
   flex-flow: row wrap;
   min-height: 80vh;
   justify-content: space-between;
-  
+
 
 
 }
+
 article {
   padding: 1em;
 }
-#kontakt summary{
+
+#kontakt summary {
   font-weight: bold;
 }
-#kontakt details{
-  margin: 1em ;
+
+#kontakt details {
+  margin: 1em;
 }
+
 #katalog {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-#loading{
+
+#loading {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -185,6 +202,7 @@ aside {
   max-height: 100%;
   padding: 1em;
   background-color: bisque;
+  border-left: 0.1em solid brown;
 
 }
 
@@ -198,6 +216,29 @@ footer {
   padding: 0 1em 0 1em;
   border-top: 0.2em solid brown;
 }
+
+
+
+
+
+
+
+
+
+
+
+.search-container {
+  margin: 20px 0;
+  text-align: center;
+  
+}
+#searchInput{
+  width: 80%;
+}
+
+
+
+
 
 
 .book {
@@ -235,4 +276,54 @@ footer {
 
 .book button:disabled {
   cursor: not-allowed;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 800px) {
+
+  header {
+    flex-direction: column;
+
+
+  }
+
+  header div {
+    justify-content: space-between;
+
+  }
+
+  header a {
+    text-align: center;
+  }
+
+  header p {
+    max-width: 3em;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  aside {
+    border: 0.1em solid brown;
+
+  }
 }

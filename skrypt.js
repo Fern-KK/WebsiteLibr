@@ -94,42 +94,44 @@ async function fetchContent() {
     lista();
 }
 fetchContent();
-
 function lista() {
+    // usuwanie ladowania
     document.getElementById("loading").remove();
+    books.forEach(element => {
+        
 
-    books.forEach(book => {
+        // Główny div
         const bookDiv = document.createElement("div");
         bookDiv.className = "book";
         
+        // div z indoramcjami o książce
         const infoDiv = document.createElement("div");
         
-        // Title
+        // Tytuł 
         const title = document.createElement("h3");
-        title.textContent = book.title;
+        title.textContent = element.title;
         infoDiv.appendChild(title);
         
-        // Author and year
+        // Autor i rok 
         const authorYear = document.createElement("p");
         let year;
-        if (book.year > 0) {
-            year = `${book.year}`;
-        } else if (book.year < 0) {
-            year = `${Math.abs(book.year)} p.n.e.`;
-        }
-        authorYear.textContent = `${book.author} (${year})`;
+        if (element.year > 0) {
+            year = `${element.year}`;
+        } else if (element.year < 0) {
+            year = `${Math.abs(element.year)} p.n.e.`;}
+        authorYear.textContent = `${element.author} (${year})`;
         infoDiv.appendChild(authorYear);
         
-        // Genre
+        // Gatunek 
         const genre = document.createElement("p");
-        genre.textContent = `Gatunek: ${book.genre}`;
+        genre.textContent = `Gatunek: ${element.genre}`;
         infoDiv.appendChild(genre);
         
-        // E-book
+        // e-booki
         const ebook = document.createElement("p");
-        if (book.ebook !== "brak") {
+        if (element.ebook !== "brak") {
             const ebookLink = document.createElement("a");
-            ebookLink.href = book.ebook;
+            ebookLink.href = element.ebook;
             ebookLink.textContent = "PDF";
             ebookLink.target = "_blank";
             ebook.textContent = "Wersja elektroniczna: ";
@@ -139,14 +141,12 @@ function lista() {
         }
         infoDiv.appendChild(ebook);
         
-        // Button
+        // Przycisk 
         const buttonDiv = document.createElement("div");
         const button = document.createElement("button");
-        if (book.available) {
+        if (element.available) {
             button.textContent = "Wypożycz";
             button.className = "available";
-            button.dataset.id = book.id; // Add the book ID as data attribute
-            button.addEventListener('click', wypozycz);
         } else {
             button.textContent = "Niedostępne";
             button.className = "unavailable";
@@ -154,12 +154,15 @@ function lista() {
         }
         buttonDiv.appendChild(button);
         
+        // Dodanie wszystkego do głównego diva
         bookDiv.appendChild(infoDiv);
         bookDiv.appendChild(buttonDiv);
         
+        // Dodanie diva do article
         document.getElementById("katalog").appendChild(bookDiv);
     });
 }
+
 
 
 
@@ -254,92 +257,6 @@ checkTime();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// async function wypozycz(event) {
-//     const button = event.target;
-//     const bookId = button.dataset.id;
-    
-//     try {
-//         // Disable button immediately
-//         button.disabled = true;
-//         button.textContent = "Przetwarzanie...";
-        
-//         const response = await fetch(`https://backend-www-projekt.onrender.com/books/${bookId}`, {
-//             method: 'PATCH',
-//             headers: {
-//                 'Content-Type': 'application/json',
-//             },
-//             body: JSON.stringify({
-//                 available: false
-//             })
-//         });
-        
-//         const data = await response.json();
-        
-//         if (response.ok) {
-//             // Update UI
-//             button.textContent = "Niedostępne";
-//             button.className = "unavailable";
-            
-//             // Update local books array
-//             const bookIndex = books.findIndex(book => book.id === parseInt(bookId));
-//             if (bookIndex !== -1) {
-//                 books[bookIndex].available = false;
-//             }
-//         } else {
-//             // Re-enable button if error
-//             button.disabled = false;
-//             button.textContent = "Wypożycz";
-//             alert(data.error || "Wystąpił błąd podczas próby wypożyczenia");
-//         }
-//     } catch (error) {
-//         console.error("Error:", error);
-//         button.disabled = false;
-//         button.textContent = "Wypożycz";
-//         alert("Wystąpił błąd połączenia. Spróbuj ponownie.");
-//     }
-// }
 
 
 
