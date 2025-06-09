@@ -1,0 +1,404 @@
+{
+    "books": [
+        {
+            "title": "Lalka",
+            "author": "Prus Bolesław",
+            "year": 1890,
+            "genre": "Klasyka",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Pan Tadeusz",
+            "author": "Mickiewicz Adam",
+            "year": 1834,
+            "genre": "Epopeja narodowa",
+            "ebook": "server/books/pan-tadeusz.pdf",
+            "available": false
+        },
+        {
+            "title": "Quo Vadis",
+            "author": "Sienkiewicz Henryk",
+            "year": 1896,
+            "genre": "Historyczna",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Chłopi",
+            "author": "Reymont Władysław",
+            "year": 1904,
+            "genre": "Klasyka",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Opowieść wigilijna",
+            "author": "Charles Dickens",
+            "year": 1843,
+            "genre": "Klasyka",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Ferdydurke",
+            "author": "Gombrowicz Witold",
+            "year": 1937,
+            "genre": "Awangarda",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Noce i dnie",
+            "author": "Dąbrowska Maria",
+            "year": 1934,
+            "genre": "Klasyka",
+            "ebook": "brak",
+            "available": false
+        },
+        {
+            "title": "Granica",
+            "author": "Nałkowska Zofia",
+            "year": 1935,
+            "genre": "Psychologiczna",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Sklepy cynamonowe",
+            "author": "Schulz Bruno",
+            "year": 1934,
+            "genre": "Oniryzm",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Zbrodnia i kara",
+            "author": "Dostojewski Fiodor",
+            "year": 1866,
+            "genre": "Psychologiczna",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Wesele",
+            "author": "Wyspiański Stanisław",
+            "year": 1901,
+            "genre": "Dramat narodowy",
+            "ebook": "brak",
+            "available": false
+        },
+        {
+            "title": "Kordian",
+            "author": "Słowacki Juliusz",
+            "year": 1834,
+            "genre": "Dramat romantyczny",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Trans-Atlantyk",
+            "author": "Gombrowicz Witold",
+            "year": 1953,
+            "genre": "Awangarda",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Przedwiośnie",
+            "author": "Żeromski Stefan",
+            "year": 1925,
+            "genre": "Klasyka polska",
+            "ebook": "brak",
+            "available": false
+        },
+        {
+            "title": "Inny świat",
+            "author": "Herling-Grudziński Gustaw",
+            "year": 1951,
+            "genre": "Literatura łagrowa",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Tango",
+            "author": "Mrożek Sławomir",
+            "year": 1964,
+            "genre": "Dramat absurdu",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Panny z Wilka",
+            "author": "Iwaszkiewicz Jarosław",
+            "year": 1933,
+            "genre": "Nowelistyka",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Sanatorium pod Klepsydrą",
+            "author": "Schulz Bruno",
+            "year": 1937,
+            "genre": "Oniryzm",
+            "ebook": "brak",
+            "available": false
+        },
+        {
+            "title": "Medaliony",
+            "author": "Nałkowska Zofia",
+            "year": 1946,
+            "genre": "Proza dokumentalna",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Wielki Gatsby",
+            "author": "Fitzgerald F. Scott",
+            "year": 1925,
+            "genre": "Klasyka",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Rok 1984",
+            "author": "Orwell George",
+            "year": 1949,
+            "genre": "Dystopia",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Zabić drozda",
+            "author": "Lee Harper",
+            "year": 1960,
+            "genre": "Klasyka",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Duma i uprzedzenie",
+            "author": "Austen Jane",
+            "year": 1813,
+            "genre": "Romans",
+            "ebook": "brak",
+            "available": false
+        },
+        {
+            "title": "Hobbit",
+            "author": "Tolkien J.R.R.",
+            "year": 1937,
+            "genre": "Fantasy",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Buszujący w zbożu",
+            "author": "Salinger J.D.",
+            "year": 1951,
+            "genre": "Literatura młodzieżowa",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Moby Dick",
+            "author": "Melville Herman",
+            "year": 1851,
+            "genre": "Przygodowa",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Wojna i pokój",
+            "author": "Tołstoj Lew",
+            "year": 1869,
+            "genre": "Historyczna",
+            "ebook": "brak",
+            "available": false
+        },
+        {
+            "title": "Odyseja",
+            "author": "Homer",
+            "year": -800,
+            "genre": "Epos",
+            "ebook": "server/books/odyseja.pdf",
+            "available": true
+        },
+        {
+            "title": "Zbrodnia i kara",
+            "author": "Dostojewski Fiodor",
+            "year": 1866,
+            "genre": "Psychologiczna",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Boska komedia",
+            "author": "Alighieri Dante",
+            "year": 1320,
+            "genre": "Epos",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Nowy wspaniały świat",
+            "author": "Huxley Aldous",
+            "year": 1932,
+            "genre": "Dystopia",
+            "ebook": "brak",
+            "available": false
+        },
+        {
+            "title": "Bracia Karamazow",
+            "author": "Dostojewski Fiodor",
+            "year": 1880,
+            "genre": "Filozoficzna",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Anna Karenina",
+            "author": "Tołstoj Lew",
+            "year": 1877,
+            "genre": "Tragedia",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Iliada",
+            "author": "Homer",
+            "year": -750,
+            "genre": "Epos",
+            "ebook": "server/books/iliada.pdf",
+            "available": true
+        },
+        {
+            "title": "Don Kichot",
+            "author": "Cervantes Miguel de",
+            "year": 1605,
+            "genre": "Przygodowa",
+            "ebook": "brak",
+            "available": false
+        },
+        {
+            "title": "Portret Doriana Graya",
+            "author": "Wilde Oscar",
+            "year": 1890,
+            "genre": "Gotyk",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Frankenstein",
+            "author": "Shelley Mary",
+            "year": 1818,
+            "genre": "Horror",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Wichrowe Wzgórza",
+            "author": "Brontë Emily",
+            "year": 1847,
+            "genre": "Gotyk",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Hrabia Monte Christo",
+            "author": "Dumas Aleksander",
+            "year": 1844,
+            "genre": "Przygodowa",
+            "ebook": "brak",
+            "available": false
+        },
+        {
+            "title": "Dziwne losy Jane Eyre",
+            "author": "Brontë Charlotte",
+            "year": 1847,
+            "genre": "Gotyk",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Alchemik",
+            "author": "Coelho Paulo",
+            "year": 1988,
+            "genre": "Fantasy",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Sto lat samotności",
+            "author": "García Márquez Gabriel",
+            "year": 1967,
+            "genre": "Realizm magiczny",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Władca Pierścieni",
+            "author": "Tolkien J.R.R.",
+            "year": 1954,
+            "genre": "Fantasy",
+            "ebook": "brak",
+            "available": false
+        },
+        {
+            "title": "Przygody Hucka Finna",
+            "author": "Twain Mark",
+            "year": 1884,
+            "genre": "Przygodowa",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Wielkie nadzieje",
+            "author": "Dickens Charles",
+            "year": 1861,
+            "genre": "Klasyka",
+            "ebook": "server/books/wigilia.pdf",
+            "available": true
+        },
+        {
+            "title": "Dżuma",
+            "author": "Camus Albert",
+            "year": 1942,
+            "genre": "Filozoficzna",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Ulisses",
+            "author": "Joyce James",
+            "year": 1922,
+            "genre": "Modernizm",
+            "ebook": "brak",
+            "available": false
+        },
+        {
+            "title": "Przemiana",
+            "author": "Kafka Franz",
+            "year": 1915,
+            "genre": "Absurd",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Nędznicy",
+            "author": "Hugo Victor",
+            "year": 1862,
+            "genre": "Historyczna",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "title": "Mały Książę",
+            "author": "Saint-Exupéry Antoine de",
+            "year": 1943,
+            "genre": "Dziecięca",
+            "ebook": "server/books/server/books/maly-ksiaze.pdf",
+            "available": true
+        }
+    ]
+}
