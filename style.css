@@ -6,7 +6,6 @@ body {
   display: flex;
   flex-direction: column;
   overflow: auto;
-  justify-content: space-between;
   min-height: 100vh;
 }
 
@@ -146,7 +145,7 @@ nav a:hover {
 section {
   display: flex;
   flex-flow: row wrap;
-  min-height: 32em;
+  min-height: 80vh;
   justify-content: space-between;
   
 

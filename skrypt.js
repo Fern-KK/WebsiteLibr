@@ -63,6 +63,12 @@ function getCookie(name) {
     if (parts.length === 2) return parts.pop().split(';').shift();
 }
 
+
+
+
+
+
+
 // kontrast
 const mode = getCookie('mode');
 if (mode === '0') lightmode();
@@ -74,9 +80,6 @@ const font = getCookie('font');
 if (font === '0') textNormal();
 else if (font === '1') textMiddle();
 else if (font === '2') textBig();
-
-
-
 
 
 
@@ -157,6 +160,133 @@ function lista() {
         document.getElementById("katalog").appendChild(bookDiv);
     });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// sprawdza czy jaki jest dzień i godz i wyświetla czy biblioteka jest teraz otwarta
+function checkTime() {
+    const now = new Date();
+    const dayOfWeek = now.getDay();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const currentTime = hours * 100 + minutes;
+
+    let state = "Biblioteka jest zamknięta"; 
+    
+    // Sprawdzamy dni (pon-pt)
+    if (dayOfWeek >= 1 && dayOfWeek <= 5) {
+        if (currentTime >= 800 && currentTime < 1900) {
+            state = "Biblioteka jest otwarta";}
+    }
+    // sobota
+    else if (dayOfWeek === 6 && currentTime >= 800 && currentTime < 1400) {
+        state = "Biblioteka jest otwarta";
+    }
+    const IsOpen = document.getElementById("IsOpen");
+    IsOpen.style.fontWeight = 'bold';
+    IsOpen.textContent = state;
+}
+
+// Co minute odpala checkTime
+setInterval(checkTime, 60000);
+checkTime();
+
+
+
+
+// function calendar() {
+//     const days = [
+//         "Poniedziałek: 8:00-19:00",
+//         "Wtorek: 8:00-19:00",
+//         "Środa: 8:00-19:00",
+//         "Czwartek: 8:00-19:00",
+//         "Piątek: 8:00-19:00",
+//         "Sobota: 8:00-14:00",
+//         "Niedziela: zamknięte"
+//     ];   
+//     days.forEach(day => {
+//         const li = document.createElement("li");
+//         const IsOpen = document.getElementById("IsOpen");
+//         const ul = document.querySelector('aside'); 
+//         ul.appendChild(li);
+//         li.textContent = day;
+//         li.after(IsOpen);
+//     });
+
+// }
+
+// calendar()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
