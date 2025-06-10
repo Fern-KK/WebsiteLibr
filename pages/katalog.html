@@ -1,48 +1,88 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <title>Katalog biblioteczny | Biblioteka Marsjańska</title>
     <link rel="stylesheet" href="../style.css" type="text/css" />
 
 </head>
-<body >
-<header>
-    <a href="../index.html">Biblioteka Marsjańska</a>
-    
-    <div>
-        <p id="light" title="Kontrast jasny"><img src="../img/eye0.svg"></p>
-        <p id="dark" title="Kontrast ciemny"><img src="../img/eye1.svg"></p>
-        <p id="yellow" title="Kontrast zółto-czarny"><img src="../img/eye2.svg"></p>
-        <p id="normalText" title="Czciona domyślna">A</p>
-        <p id="bigText" title="Czciona średnia">A</p>
-        <p id="biggerText" title="Czciona duża">A</p>
-    </div>
-    
 
-</header>
-<nav>
+<body>
+    <header>
+        <a href="../index.html">Biblioteka Marsjańska</a>
 
-    <a href="../index.html">Strona główna</a>
-    <a href="katalog.html">Katalog</a>
-    <a href="aktualnosc.html">Aktualności</a>
-    <a href="pomoc.html">Pomoc</a>
-    <a href="info.html">O nas</a>
-    <a href="kontakt.html">Kontakt</a>
-
-</nav>
-<main>
-    <article id="katalog">
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Szukaj książki..." />
+        <div>
+            <p id="light" title="Kontrast jasny"><img src="../img/eye0.svg"></p>
+            <p id="dark" title="Kontrast ciemny"><img src="../img/eye1.svg"></p>
+            <p id="yellow" title="Kontrast zółto-czarny"><img src="../img/eye2.svg"></p>
+            <p id="normalText" title="Czciona domyślna">A</p>
+            <p id="bigText" title="Czciona średnia">A</p>
+            <p id="biggerText" title="Czciona duża">A</p>
         </div>
-        <div id="loading"><img src="../img/loading-icon.svg">Łączenie...</div>
-    </article>
-    <aside>
-        Zaloguj       
-    </aside>
-</main>
+
+
+    </header>
+    <nav>
+
+        <a href="../index.html">Strona główna</a>
+        <a href="katalog.html">Katalog</a>
+        <a href="aktualnosc.html">Aktualności</a>
+        <a href="pomoc.html">Pomoc</a>
+        <a href="info.html">O nas</a>
+        <a href="kontakt.html">Kontakt</a>
+
+    </nav>
+    <main>
+        <article id="katalog">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Szukaj książki..." />
+                <details>
+                    <summary>Filtry</summary>
+                    <div id="filters">
+
+                        <select name="genre" id="genreFilter">
+                            <option value="all" selected>Wszystkie gatunki</option>
+                            <option value="Fantasy">Fantasy</option>
+                            <option value="Klasyka">Klasyka</option>
+                            <option value="Scifi">Science Fiction</option>
+                            <option value="Horror">Horror</option>
+                            <option value="Romans">Romans</option>
+                            <option value="Dziecięca">Dziecięca</option>
+                            <option value="Historyczna">Historyczna</option>
+                            <option value="Epos">Epos</option>
+                            <option value="Przygodowa">Przygodowa</option>
+                            <option value="Dystopia">Dystopia</option>
+                            <option value="Gotyk">Gotyk</option>
+                            <option value="Wojenna">Wojenna</option>
+                            <option value="Psychologiczna">Psychologiczna</option>
+                        </select>
+
+                        <select name="year" id="yearFilter">
+                            <option value="all" selected>Wszystkie okresy</option>
+                            <option value="pne">Starożytność (przed 476)</option>
+                            <option value="sr">Średniowiecze</option>
+                            <option value="16">XVI wiek</option>
+                            <option value="17">XVII wiek</option>
+                            <option value="18">XVIII wiek</option>
+                            <option value="19">XIX wiek</option>
+                            <option value="20">XX wiek</option>
+                            <option value="21">XXI wiek</option>
+                        </select>
+
+                        <label><input type="checkbox" name="available"> Dostępne</label>
+                        <label><input type="checkbox" name="ebook"> E-book</label>
+
+                        <button type="button" id="reset">Wyczyść</button>      
+                        <button type="button" id="filtr">Filtruj</button>                     
+                    </div>
+                </details>
+            </div>
+            <div id="loading"><img src="../img/loading-icon.svg">Łączenie...</div>
+        </article>
+    </main>
 
 
 
@@ -50,6 +90,8 @@
 
 
 
-<footer>Copyright © 2025 Biblioteka Marsjańska</footer></body>
+    <footer>Copyright © 2025 Biblioteka Marsjańska</footer>
+</body>
 <script src="../skrypt.js"></script>
+
 </html>
