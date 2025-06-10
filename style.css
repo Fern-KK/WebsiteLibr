@@ -11,12 +11,11 @@ body {
 
 /* ustawienia kontrastów */
 .lightMode,
-.lightMode header a,
+.lightMode header,
 .lightMode div h3 {
   background-color: #ffffff;
   color: #101418;
 }
-
 .darkMode,
 .darkMode header a,
 .darkMode nav a,
@@ -24,14 +23,26 @@ body {
   background-color: #101418;
   color: #F8F9FA;
 }
-
 .yellowMode,
 .yellowMode header a,
+.yellowMode nav,
 .yellowMode nav a,
-.yellowMode div h3 {
+.yellowMode .book,
+.yellowMode div h3,
+.yellowMode footer {
   background-color: #FFF832;
   color: black;
+  border-color: #101418;
 }
+.yellowMode #loading img {
+  filter: grayscale(100%);
+  filter: brightness(0);
+}
+
+
+
+
+
 /* ustawienia rozmaru teksu */
 .normalText,
 .normalText .available,
@@ -189,6 +200,7 @@ article {
 
 
 
+
 /* pasek boczny */
 aside {
   display: flex;
@@ -295,19 +307,13 @@ footer {
 
   header {
     flex-direction: column;
-
-
   }
-
   header div {
     justify-content: space-between;
-
   }
-
   header a {
     text-align: center;
   }
-
   header p {
     max-width: 3em;
   }
