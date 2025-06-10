@@ -2,50 +2,50 @@
 function lightmode() {
     document.body.classList.remove('darkMode', 'yellowMode');
     document.body.classList.add('lightMode');
-    setCookie('mode', '0');
+    localStorage.setItem("Mod", 'lightMode');
 }
 function darkmode() {
     document.body.classList.remove('lightMode', 'yellowMode');
     document.body.classList.add('darkMode');
-    setCookie('mode', '1');
+    localStorage.setItem("Mod", 'darkMode');
 }
 function yellowmode() {
     document.body.classList.remove('darkMode', 'lightMode');
     document.body.classList.add('yellowMode');
-    setCookie('mode', '2');
+    localStorage.setItem("Mod", 'yellowMode');
 }
 
 // to samo co wczesnie ale dla wielkosci tekstu
 function textNormal() {
     document.body.classList.remove('bigText', 'biggerText');
     document.body.classList.add('normalText');
-    setCookie('font', '0');
+    localStorage.setItem("Font", 'normalText');
 }
 
 function textMiddle() {
     document.body.classList.remove('normalText', 'biggerText');
     document.body.classList.add('bigText');
-    setCookie('font', '1');
+    localStorage.setItem("Font", 'bigText');
 }
 
 function textBig() {
     document.body.classList.remove('normalText', 'bigText');
     document.body.classList.add('biggerText');
-    setCookie('font', '2');
+    localStorage.setItem("Font", 'biggerText');
 }
 
-// do ustawiania cookies
-function setCookie(name, value) {
-    document.cookie = `${name}=${value}; path=/; max-age=86400`;
-}
+// // do ustawiania cookies
+// function setCookie(name, value) {
+//     document.cookie = `${name}=${value}; path=/; max-age=86400`;
+// }
 
-// zalaczanie domyslnych ustawien
-if (!document.cookie.includes('mode=')) {
-    setCookie('mode', '0');
-}
-if (!document.cookie.includes('font=')) {
-    setCookie('font', '0');
-}
+// // zalaczanie domyslnych ustawien
+// if (!document.cookie.includes('mode=')) {
+//     setCookie('mode', '0');
+// }
+// if (!document.cookie.includes('font=')) {
+//     setCookie('font', '0');
+// }
 
 // wykrywa klikniecie i wywoluje funkcie kontrastu i czciosnki
 document.getElementById('light').addEventListener('click', lightmode);
@@ -63,6 +63,17 @@ function getCookie(name) {
     if (parts.length === 2) return parts.pop().split(';').shift();
 }
 
+if(localStorage.getItem("zwierze"))
+{
+    console.log("Dziala kotek")
+    console.log(localStorage.getItem("zwierze"));
+}
+else
+{
+    let a = "KOT"
+localStorage.setItem("zwierze",a)
+console.log("Utworzony kotek")
+}
 
 
 
