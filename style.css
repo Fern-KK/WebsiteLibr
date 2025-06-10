@@ -31,7 +31,8 @@ body {
 .darkMode,
 .darkMode header a,
 .darkMode nav a,
-.darkMode div h3 {
+.darkMode div h3,
+.darkMode #news a {
   background-color: #101418;
   color: #F8F9FA;
 }
@@ -46,8 +47,9 @@ body {
 .yellowMode nav,
 .yellowMode nav a,
 .yellowMode .book,
+.yellowMode aside,
 .yellowMode div h3,
-.yellowMode footer {
+.yellowMode footer{
   background-color: #FFF832;
   color: black;
   border-color: #101418;
