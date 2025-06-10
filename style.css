@@ -10,11 +10,12 @@ body {
 }
 
 
-@keyframes lista{
-  0%{
+@keyframes lista {
+  0% {
     opacity: 0;
   }
-  100%{
+
+  100% {
     opacity: 1;
   }
 }
@@ -26,6 +27,7 @@ body {
   background-color: #ffffff;
   color: #101418;
 }
+
 .darkMode,
 .darkMode header a,
 .darkMode nav a,
@@ -33,8 +35,9 @@ body {
   background-color: #101418;
   color: #F8F9FA;
 }
+
 .darkMode .search-container details,
-.darkMode #filters{
+.darkMode #filters {
   border-color: #F8F9FA;
 }
 
@@ -49,6 +52,9 @@ body {
   color: black;
   border-color: #101418;
 }
+.yellowMode header img {
+  filter: grayscale(100%);
+}
 .yellowMode #loading img {
   filter: grayscale(100%);
   filter: brightness(0);
@@ -60,6 +66,11 @@ body {
 }
 .yellowMode .book button.unavailable {
   background-color: black;
+}
+.yellowMode nav a:hover {
+  background-color: black;
+  color: #F8F9FA;
+  text-decoration: underline;
 }
 
 
@@ -91,9 +102,11 @@ body {
 #normalText {
   font-size: 1em;
 }
+
 #bigText {
   font-size: 1.2em;
 }
+
 #biggerText {
   font-size: 1.5em;
 }
@@ -119,7 +132,13 @@ header a {
   text-decoration: none;
   flex-grow: 7;
   font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: start;
 
+}
+header p img{
+  font-size: 1.2em;
 }
 
 header div {
@@ -128,6 +147,7 @@ header div {
   flex-grow: 1;
   justify-items: center;
   justify-content: space-evenly;
+
 }
 
 header div p {
@@ -173,7 +193,8 @@ nav a {
 }
 
 nav a:hover {
-  background-color: grey;
+  background-color: brown;
+  color: #F8F9FA;
   text-decoration: underline;
 }
 
@@ -199,11 +220,20 @@ article {
 
 }
 
-#kontakt summary {
+article h3,
+article h3 a {
+  padding: 1em 0 0 0;
+  color: black;
+  text-decoration: none;
+
+
+}
+
+#str_summary summary {
   font-weight: bold;
 }
 
-#kontakt details {
+#str_summary details {
   margin: 1em;
 }
 
@@ -265,7 +295,8 @@ footer {
   text-align: center;
   align-items: center;
 }
-.search-container details{
+
+.search-container details {
   margin-top: 0.5em;
   padding: 0.2em;
   border: #101418 1px solid;
@@ -274,10 +305,12 @@ footer {
   min-width: 80%;
 
 }
-.search-container summary{
+
+.search-container summary {
   padding: 0.2em;
 }
-#searchInput{
+
+#searchInput {
   min-width: 80%;
   height: 2em;
   font-size: 1em;
@@ -286,6 +319,7 @@ footer {
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
 }
+
 #filters {
   display: flex;
   flex-flow: row wrap;
@@ -363,23 +397,29 @@ footer {
 
   header {
     flex-direction: column;
-    
+
   }
+
   header div {
-    
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 0.3em;
     justify-content: space-evenly;
   }
+
   header a {
     text-align: center;
   }
- 
-  main{
+
+  main {
     display: flex;
     flex-flow: row wrap;
   }
-  article{
+
+  article {
     width: 100%;
   }
+
   aside {
     border-top: 0.1em solid brown;
     width: 100%;

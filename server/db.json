@@ -1,22 +1,25 @@
 {
     "books": [
         {
-            "title": "Lalka",
-            "author": "Prus Bolesław",
-            "year": 1890,
-            "genre": "Klasyka",
+            "id": 1,
+            "title": "Epos o Gilgameszu",
+            "author": "Anonim",
+            "year": -2100, 
+            "genre": "Epos",
             "ebook": "brak",
             "available": true
         },
         {
+            "id": 2,
             "title": "Pan Tadeusz",
             "author": "Mickiewicz Adam",
             "year": 1834,
-            "genre": "Epopeja narodowa",
-            "ebook": "server/books/pan-tadeusz.pdf",
+            "genre": "Epos",
+            "ebook": "https://backend-www-projekt.onrender.com/books/pan-tadeusz.pdf",
             "available": false
         },
         {
+            "id": 3,
             "title": "Quo Vadis",
             "author": "Sienkiewicz Henryk",
             "year": 1896,
@@ -25,6 +28,7 @@
             "available": true
         },
         {
+            "id": 4,
             "title": "Chłopi",
             "author": "Reymont Władysław",
             "year": 1904,
@@ -33,22 +37,16 @@
             "available": true
         },
         {
-            "title": "Opowieść wigilijna",
-            "author": "Charles Dickens",
-            "year": 1843,
-            "genre": "Klasyka",
-            "ebook": "brak",
-            "available": true
-        },
-        {
+            "id": 5,
             "title": "Ferdydurke",
             "author": "Gombrowicz Witold",
             "year": 1937,
-            "genre": "Awangarda",
+            "genre": "Modernizm",
             "ebook": "brak",
             "available": true
         },
         {
+            "id": 6,
             "title": "Noce i dnie",
             "author": "Dąbrowska Maria",
             "year": 1934,
@@ -57,6 +55,7 @@
             "available": false
         },
         {
+            "id": 7,
             "title": "Granica",
             "author": "Nałkowska Zofia",
             "year": 1935,
@@ -65,14 +64,16 @@
             "available": true
         },
         {
-            "title": "Sklepy cynamonowe",
-            "author": "Schulz Bruno",
-            "year": 1934,
-            "genre": "Oniryzm",
+            "id": 8,
+            "title": "Wiedźmin: Ostatnie życzenie",
+            "author": "Andrzej Sapkowski",
+            "year": 1993,
+            "genre": "Fantasy",
             "ebook": "brak",
             "available": true
         },
         {
+            "id": 9,
             "title": "Zbrodnia i kara",
             "author": "Dostojewski Fiodor",
             "year": 1866,
@@ -81,78 +82,70 @@
             "available": true
         },
         {
+            "id": 10,
             "title": "Wesele",
             "author": "Wyspiański Stanisław",
             "year": 1901,
-            "genre": "Dramat narodowy",
+            "genre": "Dramat",
             "ebook": "brak",
             "available": false
         },
         {
+            "id": 11,
             "title": "Kordian",
             "author": "Słowacki Juliusz",
             "year": 1834,
-            "genre": "Dramat romantyczny",
+            "genre": "Dramat",
             "ebook": "brak",
             "available": true
         },
         {
+            "id": 12,
             "title": "Trans-Atlantyk",
             "author": "Gombrowicz Witold",
             "year": 1953,
-            "genre": "Awangarda",
+            "genre": "Modernizm",
             "ebook": "brak",
             "available": true
         },
         {
+            "id": 13,
             "title": "Przedwiośnie",
             "author": "Żeromski Stefan",
             "year": 1925,
-            "genre": "Klasyka polska",
+            "genre": "Klasyka",
             "ebook": "brak",
             "available": false
         },
         {
+            "id": 14,
             "title": "Inny świat",
             "author": "Herling-Grudziński Gustaw",
             "year": 1951,
-            "genre": "Literatura łagrowa",
+            "genre": "Wojenna",
             "ebook": "brak",
             "available": true
         },
         {
+            "id": 15,
             "title": "Tango",
             "author": "Mrożek Sławomir",
             "year": 1964,
-            "genre": "Dramat absurdu",
+            "genre": "Dramat",
             "ebook": "brak",
             "available": true
         },
         {
-            "title": "Panny z Wilka",
-            "author": "Iwaszkiewicz Jarosław",
-            "year": 1933,
-            "genre": "Nowelistyka",
-            "ebook": "brak",
-            "available": true
-        },
-        {
-            "title": "Sanatorium pod Klepsydrą",
-            "author": "Schulz Bruno",
-            "year": 1937,
-            "genre": "Oniryzm",
-            "ebook": "brak",
-            "available": false
-        },
-        {
+            "id": 16,
             "title": "Medaliony",
             "author": "Nałkowska Zofia",
             "year": 1946,
-            "genre": "Proza dokumentalna",
+            "genre": "Wojenna",
             "ebook": "brak",
             "available": true
         },
         {
+            "id": 17,
             "title": "Wielki Gatsby",
             "author": "Fitzgerald F. Scott",
             "year": 1925,
@@ -161,6 +154,7 @@
             "available": true
         },
         {
+            "id": 18,
             "title": "Rok 1984",
             "author": "Orwell George",
             "year": 1949,
@@ -169,6 +163,7 @@
             "available": true
         },
         {
+            "id": 19,
             "title": "Zabić drozda",
             "author": "Lee Harper",
             "year": 1960,
@@ -177,6 +172,7 @@
             "available": true
         },
         {
+            "id": 20,
             "title": "Duma i uprzedzenie",
             "author": "Austen Jane",
             "year": 1813,
@@ -185,6 +181,7 @@
             "available": false
         },
         {
+            "id": 21,
             "title": "Hobbit",
             "author": "Tolkien J.R.R.",
             "year": 1937,
@@ -193,14 +190,7 @@
             "available": true
         },
         {
-            "title": "Buszujący w zbożu",
-            "author": "Salinger J.D.",
-            "year": 1951,
-            "genre": "Literatura młodzieżowa",
-            "ebook": "brak",
-            "available": true
-        },
-        {
+            "id": 22,
             "title": "Moby Dick",
             "author": "Melville Herman",
             "year": 1851,
@@ -209,6 +199,7 @@
             "available": true
         },
         {
+            "id": 23,
             "title": "Wojna i pokój",
             "author": "Tołstoj Lew",
             "year": 1869,
@@ -217,22 +208,16 @@
             "available": false
         },
         {
+            "id": 24,
             "title": "Odyseja",
             "author": "Homer",
             "year": -800,
             "genre": "Epos",
-            "ebook": "server/books/odyseja.pdf",
+            "ebook": "https://backend-www-projekt.onrender.com/books/odyseja.pdf",
             "available": true
         },
         {
-            "title": "Zbrodnia i kara",
-            "author": "Dostojewski Fiodor",
-            "year": 1866,
-            "genre": "Psychologiczna",
-            "ebook": "brak",
-            "available": true
-        },
-        {
+            "id": 25,
             "title": "Boska komedia",
             "author": "Alighieri Dante",
             "year": 1320,
@@ -241,6 +226,7 @@
             "available": true
         },
         {
+            "id": 26,
             "title": "Nowy wspaniały świat",
             "author": "Huxley Aldous",
             "year": 1932,
@@ -249,30 +235,25 @@
             "available": false
         },
         {
+            "id": 27,
             "title": "Bracia Karamazow",
             "author": "Dostojewski Fiodor",
             "year": 1880,
-            "genre": "Filozoficzna",
+            "genre": "Psychologiczna",
             "ebook": "brak",
             "available": true
         },
         {
-            "title": "Anna Karenina",
-            "author": "Tołstoj Lew",
-            "year": 1877,
-            "genre": "Tragedia",
-            "ebook": "brak",
-            "available": true
-        },
-        {
+            "id": 28,
             "title": "Iliada",
             "author": "Homer",
             "year": -750,
             "genre": "Epos",
-            "ebook": "server/books/iliada.pdf",
+            "ebook": "https://backend-www-projekt.onrender.com/books/iliada.pdf",
             "available": true
         },
         {
+            "id": 29,
             "title": "Don Kichot",
             "author": "Cervantes Miguel de",
             "year": 1605,
@@ -281,6 +262,7 @@
             "available": false
         },
         {
+            "id": 30,
             "title": "Portret Doriana Graya",
             "author": "Wilde Oscar",
             "year": 1890,
@@ -289,6 +271,7 @@
             "available": true
         },
         {
+            "id": 31,
             "title": "Frankenstein",
             "author": "Shelley Mary",
             "year": 1818,
@@ -297,6 +280,7 @@
             "available": true
         },
         {
+            "id": 32,
             "title": "Wichrowe Wzgórza",
             "author": "Brontë Emily",
             "year": 1847,
@@ -305,6 +289,7 @@
             "available": true
         },
         {
+            "id": 33,
             "title": "Hrabia Monte Christo",
             "author": "Dumas Aleksander",
             "year": 1844,
@@ -313,30 +298,16 @@
             "available": false
         },
         {
-            "title": "Dziwne losy Jane Eyre",
-            "author": "Brontë Charlotte",
-            "year": 1847,
-            "genre": "Gotyk",
+            "id": 34,
+            "title": "Lalka",
+            "author": "Prus Bolesław",
+            "year": 1890,
+            "genre": "Klasyka",
             "ebook": "brak",
             "available": true
         },
         {
-            "title": "Alchemik",
-            "author": "Coelho Paulo",
-            "year": 1988,
-            "genre": "Fantasy",
-            "ebook": "brak",
-            "available": true
-        },
-        {
-            "title": "Sto lat samotności",
-            "author": "García Márquez Gabriel",
-            "year": 1967,
-            "genre": "Realizm magiczny",
-            "ebook": "brak",
-            "available": true
-        },
-        {
+            "id": 35,
             "title": "Władca Pierścieni",
             "author": "Tolkien J.R.R.",
             "year": 1954,
@@ -345,6 +316,7 @@
             "available": false
         },
         {
+            "id": 36,
             "title": "Przygody Hucka Finna",
             "author": "Twain Mark",
             "year": 1884,
@@ -353,22 +325,16 @@
             "available": true
         },
         {
-            "title": "Wielkie nadzieje",
+            "id": 37,
+            "title": "Opowieść wigilijna",
             "author": "Dickens Charles",
-            "year": 1861,
+            "year": 1843,
             "genre": "Klasyka",
-            "ebook": "server/books/wigilia.pdf",
+            "ebook": "https://backend-www-projekt.onrender.com/books/wigilia.pdf",
             "available": true
         },
         {
-            "title": "Dżuma",
-            "author": "Camus Albert",
-            "year": 1942,
-            "genre": "Filozoficzna",
-            "ebook": "brak",
-            "available": true
-        },
-        {
+            "id": 38,
             "title": "Ulisses",
             "author": "Joyce James",
             "year": 1922,
@@ -377,14 +343,7 @@
             "available": false
         },
         {
-            "title": "Przemiana",
-            "author": "Kafka Franz",
-            "year": 1915,
-            "genre": "Absurd",
-            "ebook": "brak",
-            "available": true
-        },
-        {
+            "id": 39,
             "title": "Nędznicy",
             "author": "Hugo Victor",
             "year": 1862,
@@ -393,12 +352,62 @@
             "available": true
         },
         {
+            "id": 40,
             "title": "Mały Książę",
             "author": "Saint-Exupéry Antoine de",
             "year": 1943,
             "genre": "Dziecięca",
-            "ebook": "server/books/server/books/maly-ksiaze.pdf",
+            "ebook": "https://backend-www-projekt.onrender.com/books/maly-ksiaze.pdf",
             "available": true
+        },
+        {
+            "id": 41,
+            "title": "Solaris",
+            "author": "Lem Stanisław",
+            "year": 1961,
+            "genre": "Scifi",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "id": 42,
+            "title": "Diuna",
+            "author": "Herbert Frank",
+            "year": 1965,
+            "genre": "Scifi",
+            "ebook": "brak",
+            "available": true
+        },
+        {
+            "id": 43,
+            "title": "Kubuś Puchatek",
+            "author": "Milne A.A.",
+            "year": 1926,
+            "genre": "Dziecięca",
+            "ebook": "brak",
+            "available": true
+        }
+    ],
+    "news": [
+        {
+            "title": "Zamknięcie biblioteki na święta",
+            "bit": "Główny Odział Biblioteki Marsjańskiej będzie zamknięty dnia 12.05.2055 z powodu Dnia Pioniera",
+            "url": "news/13-05-2055.html"
+        },
+        {
+            "title": "Nowe książki",
+            "bit": "Nowe książki w języku Gibberish są już dostępne.",
+            "url": "news/11-03-2055.html"
+        },
+        {
+            "title": "Zamknięcie rejestracji Jowiszanom",
+            "bit": "Od dnia 30.08.2055 biblioteka będzie nie przyjmowała nowych rejestracji z Planety Jowisz.",
+            "url": "news/09-03-2055.html"
+        },
+        {
+            "title": "Prośba do Reptylian",
+            "bit": "Prosimy reptilian o nieużywanie umiejętności zmiany wyglądu. Spowodowane jesto to licznymi próbami wyłudzenia kart bibliotecznych w celu sprzedania ich kosmitom z galaktyki Andromeda",
+            "url": "news/29-12-2054.html"
         }
     ]
 }

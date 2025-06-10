@@ -125,6 +125,10 @@ if(document.getElementById("katalog")){
     let books;
     async function fetchContent() {
         const response = await fetch('https://backend-www-projekt.onrender.com/books');
+        if (!response.ok) {
+                document.getElementById("loading").remove();
+                document.getElementById("katalog").textContent= `HTTP error! Status: ${response.status}`;
+            }
         const data = await response.json();
         books = data.books;
         lista();
@@ -257,21 +261,60 @@ function applyFilters() {
     });
 };
 
-document.getElementById("filtr").addEventListener('click', applyFilters);
+
+
+
+//jesśli filtr istniej nasłuchuje
+if(document.getElementById("filtr")){
+document.getElementById("filtr").addEventListener('click', applyFilters);}
 
 
 //reset
-document.getElementById("resetFilters").addEventListener('click', function() {
+if(document.getElementById("reset")){
+document.getElementById("reset").addEventListener('click', function() {
     document.getElementsByName('available')[0].checked = false;
     document.getElementsByName('ebook')[0].checked = false;
     document.getElementById("yearFilter").value = "all";
     document.getElementById("genreFilter").value = "all";
     applyFilters();
-});
+})};    
 
 
 
 
+if(document.getElementById("news")){
+   
+    let news;
+    async function fetchContentNews() {
+        const response = await fetch('https://backend-www-projekt.onrender.com/books');
+        if (!response.ok) {
+                document.getElementById("loading").remove();
+                document.getElementById("katalog").textContent= `HTTP error! Status: ${response.status}`;
+            }
+        const data = await response.json();
+        news = data.news;
+        listaNews();
+    }
+    fetchContentNews();
+    function listaNews() {
+    // usuwanie ladowania
+    document.getElementById("loading").remove();
+    news.forEach(element => {
+
+        const title = document.createElement("h3");
+        const link = document.createElement("a");
+        link.href = element.url;
+        link.textContent = element.title;
+        const p = document.createElement("p");
+        p.textContent = element.bit;
+
+
+        title.appendChild(link);
+        document.getElementById("news").appendChild(title);
+        document.getElementById("news").appendChild(p);
+        
+    });
+}}
 
 
 
