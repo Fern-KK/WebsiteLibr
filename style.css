@@ -219,7 +219,6 @@ main {
 article {
   padding: 1em;
   width: 80%;
-
 }
 
 article h3,
@@ -227,8 +226,39 @@ article h3 a {
   padding: 1em 0 0 0;
   color: black;
   text-decoration: none;
+}
 
 
+#baner{
+  background-image: url(/img/photo.webp);
+  width: 100%;
+  height: 10em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#bottom{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+#oneDiv{
+  width: 40%;
+  padding: 1em;
+  height: 70%;
+  border-right: #101418 solid 1px;
+}
+#twoDiv{
+  width: 40%;
+  height: 70%;
+  padding: 1em;
+  text-align: center;
+}
+#twoDiv ul{
+  text-align: justify;
 }
 
 #str_summary summary {
@@ -279,12 +309,6 @@ footer {
   padding: 0 1em 0 1em;
   border-top: 0.2em solid brown;
 }
-
-
-
-
-
-
 
 
 
@@ -399,7 +423,6 @@ footer {
 
   header {
     flex-direction: column;
-
   }
 
   header div {
@@ -411,6 +434,8 @@ footer {
 
   header a {
     text-align: center;
+      justify-content: center;
+
   }
 
   main {
@@ -420,11 +445,27 @@ footer {
 
   article {
     width: 100%;
+    
   }
 
   aside {
+    border: none;
     border-top: 0.1em solid brown;
     width: 100%;
+    height: min-content ;
   }
 
+
+#bottom{
+  display: flex;
+  flex-flow: column;
+}
+#oneDiv{
+  border: none;
+  width: 100%;
+}
+#twoDiv{
+  border: none;
+  width: 100%;
+}
 }

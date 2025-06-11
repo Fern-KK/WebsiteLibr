@@ -3,16 +3,16 @@ const app = express()
 const cors = require('cors')
 const port = 3000
 const fs = require('fs')
+const path = require('path')
 
 // Json and cors
-
 app.use(cors())
 app.use(express.json())
 
-// Get movies and series
 
+// api
 app.get('/books', (req, res) => {
-    fs.readFile('./server/db.json', 'utf8', (err, data) => {
+    fs.readFile('db.json', 'utf8', (err, data) => {
         if (err) {
             console.error('Error reading file: ', err)
             res.status(500).send('Error reading file')
@@ -30,11 +30,26 @@ app.get('/books', (req, res) => {
     })
 })
 
-// Start the server and listen on port
-
-app.listen(port, () => {
-console.log(`API is listening on port ${port}`)
+// sciezka do pdf
+app.get('/books/:filename', (req, res) => {
+    const filePath = path.join(__dirname, 'books', req.params.filename)
+    
+    // czy istnieje
+    fs.access(filePath, fs.constants.F_OK, (err) => {
+        if (err) {
+            res.status(404).send('File not found')
+            return
+        }
+        
+        
+        res.setHeader('Content-Type', 'application/pdf')
+        
+        // wysyla
+        res.sendFile(filePath)
+    })
 })
 
-
-
+// Start serwer
+app.listen(port, () => {
+    console.log(`API is listening on port ${port}`)
+})

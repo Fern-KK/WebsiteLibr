@@ -166,7 +166,7 @@ if(document.getElementById("katalog")){
         const infoDiv = document.createElement("div");
         
         // Tytuł 
-        const title = document.createElement("h3");
+        const title = document.createElement("h2");
         title.textContent = element.title;
         infoDiv.appendChild(title);
         
@@ -207,11 +207,13 @@ if(document.getElementById("katalog")){
         if (element.available) {
             button.textContent = "Wypożycz";
             button.className = "available";
+            button.addEventListener("click", wypozycz);
         } else {
             button.textContent = "Niedostępne";
             button.className = "unavailable";
             button.disabled = true;
         }
+        button.dataset.id = element._id; 
         buttonDiv.appendChild(button);
         
         // Dodanie wszystkego do głównego diva
@@ -231,13 +233,16 @@ function applyFilters() {
     const ebook = document.getElementsByName('ebook')[0].checked;
     const yearInput = document.getElementById("yearFilter").value;
     const genreInput = document.getElementById("genreFilter").value;
-    
+    const search = document.getElementById("searchInput").value.toUpperCase();
+
+
     const books = document.querySelectorAll(".book");
     
     books.forEach(book => {
         let showBook = true;
 
-        // Apply each filter only if it's active
+        const info = (book.getAttribute("title")+' '+book.getAttribute("author")+' '+book.getAttribute("genre")).toUpperCase()
+        
         if (dostep) {
             showBook = showBook && book.getAttribute("available") === "true";
         }
@@ -252,6 +257,9 @@ function applyFilters() {
         
         if (genreInput && genreInput !== "all") {
             showBook = showBook && book.getAttribute("genre") === genreInput;
+        }
+        if (search) {
+            showBook = showBook && info.includes(search);
         }
         
 
@@ -276,12 +284,14 @@ document.getElementById("reset").addEventListener('click', function() {
     document.getElementsByName('ebook')[0].checked = false;
     document.getElementById("yearFilter").value = "all";
     document.getElementById("genreFilter").value = "all";
+    document.getElementById("searchInput").value = "";
+
     applyFilters();
 })};    
 
 
 
-
+//artykuly
 if(document.getElementById("news")){
    
     let news;
@@ -289,7 +299,7 @@ if(document.getElementById("news")){
         const response = await fetch('https://backend-www-projekt.onrender.com/books');
         if (!response.ok) {
                 document.getElementById("loading").remove();
-                document.getElementById("katalog").textContent= `HTTP error! Status: ${response.status}`;
+                document.getElementById("news").textContent= `HTTP error! Status: ${response.status}`;
             }
         const data = await response.json();
         news = data.news;
@@ -320,76 +330,26 @@ if(document.getElementById("news")){
 
 
 
-// function applyFilters() {
-//     const dostep = document.getElementsByName('available')[0].value;
-//     const ebook = document.getElementsByName('ebook')[0].value;
-//     const yearImput = document.getElementsById("yearFilter").value;
-//     const genreImput = document.getElementsById("genreFilter").value;
 
-//     // const search = document.searchInput.value.toUpperCase();
+
+function wypozycz() {
+    const button = this;
+    const a = prompt("Podaj numer swojej karty bibliotecznej:");
     
-//     const books = document.querySelectorAll(".book");
-//     books.forEach(book => {
-//         // const info = (book.getAttribute("title")+book.getAttribute("author")+book.getAttribute("genre")+book.getAttribute("year")).toUpperCase()
-//         let showBook = true;
-
-
-//         if(dostep.checked===true){
-//             if(book.getAttribute("available")){
-//                 showBook=true;
-//             }else{showBook=false;}}
-
-//         if(ebook.checked===true){
-//             if(book.getAttribute("ebook")==="brak"){
-//                 showBook=false;
-//             }else{showBook=true;}}
-
-//         if(yearImput===book.getAttribute("year")){
-//             showBook=true;
-//         }else{showBook=false;}
-
-//         if(genreImput===book.getAttribute("genre")){
-//             showBook=true;
-//         }else{showBook=false;}    
-
+    if (a !== null && a.trim() !== "") {
+                
+        // bieze nalbizszy book
+        const bookDiv = button.closest('.book');
         
-//         // if(info.includes(search)){
-//         //     if(book.getAttribute(available)){
-//         //         book.style.display = "flex"
-//         //     }else{book.style.display = "none"}}
-//         // else{book.style.display = "flex"}
-
-//         if(showBook){book.style.display = "flex"}
-//         else{book.style.display = "none"}
+        // Zmień wygląd przycisku
+        button.textContent = "Niedostępne";
+        button.classList.remove("available");
+        button.classList.add("unavailable");
+        button.disabled = true;
+        bookDiv.setAttribute('available', 'false');
         
-
-
-
-//     })
-// };
-
-// document.getElementById("filtr").addEventListener('click', applyFilters);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
+}
 
 
 
