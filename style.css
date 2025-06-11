@@ -454,6 +454,21 @@ footer {
     height: min-content ;
   }
 
+.normalText .available,
+.normalText .unavailable,
+.normalText #searchInput {
+  font-size: 1em;
+}
+.bigText .available,
+.bigText .unavailable,
+.bigText #searchInput {
+  font-size: 1em;
+}
+.biggerText .available,
+.biggerText .unavailable,
+.biggerText #searchInput {
+  font-size: 1em;
+}
 
 #bottom{
   display: flex;
