@@ -32,6 +32,7 @@ body {
 .darkMode header a,
 .darkMode nav a,
 .darkMode div h3,
+.darkMode h3
 .darkMode #news a {
   background-color: #101418;
   color: #F8F9FA;
@@ -343,7 +344,6 @@ footer {
   border-radius: 0.5em;
   border: 1px solid black;
   text-align: center;
-  font-family: 'Times New Roman', Times, serif;
 }
 
 #filters {
@@ -372,7 +372,6 @@ footer {
 }
 
 .book button {
-  font-family: 'Times New Roman', Times, serif;
   font-size: 1em;
   padding: 0.5em 1em;
   cursor: pointer;
