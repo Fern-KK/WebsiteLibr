@@ -34,7 +34,9 @@ body {
 .darkMode nav a,
 .darkMode div h3,
 .darkMode article h3
-.darkMode #news a {
+.darkMode #news a,
+.darkMode #news p,
+.darkMode #news h3{
   background-color: #101418;
   color: #F8F9FA;
 }
